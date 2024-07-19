@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+#TODO: check if CHATAPP_FRONTEND_DIR | CHATAPP_BACKEND_DIR exists
+#TODO: check if above repos are actually present
+
+# build protobuf files
+mkdir grpc_out
+mkdir grpc_out/go
+mkdir grpc_out/dart
+
+protoc --dart_out=grpc_out/dart --go_out=grpc_out/go ./protobuf/*.proto 
